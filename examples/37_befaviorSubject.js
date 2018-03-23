@@ -19,9 +19,6 @@ export class AuthService {
     this.isLoginSubject.next(true);
   }
 
-  /**
-   * Log out the user then tell all the subscribers about the new status
-   */
   logout(): void {
     localStorage.removeItem('token');
     this.isLoginSubject.next(false);
